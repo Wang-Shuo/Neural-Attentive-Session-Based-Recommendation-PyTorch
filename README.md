@@ -4,25 +4,25 @@ A PyTorch implementation of the NARM model in [Neural Attentive Session Based Re
 ![architecture](assets/narm.jpeg)
 
 # Usage
-1. Download datasets used in the paper: [YOOCHOOSE](http://2015.recsyschallenge.com/challenge.html) and [DIGINETICA](http://cikm2016.cs.iupui.edu/cikm-cup). Put the two specific files named `train-item-views.csv` and `yoochoose-clicks.dat` into the folder `datasets/`
-
-2. Install required packages from requirements.txt file.
+1. Install required packages from requirements.txt file.
 ```bash
 pip install -r requirements.txt
 ```
 
-1. Change to `datasets` fold and run `preprocess.py` script to preprocess datasets. Two directories named after dataset should be generated under `datasets/`.
+2. Download datasets used in the paper: [YOOCHOOSE](http://2015.recsyschallenge.com/challenge.html) and [DIGINETICA](http://cikm2016.cs.iupui.edu/cikm-cup). Put the two specific files named `train-item-views.csv` and `yoochoose-clicks.dat` into the folder `datasets/`
+
+3. Change to `datasets` fold and run `preprocess.py` script to preprocess datasets. Two directories named after dataset should be generated under `datasets/`.
 ```bash
 python preprocess.py --dataset diginetica
 python preprocess.py --dataset yoochoose
 ```
 
-3. Run main.py file to train the model. You can configure some training parameters through the command line. 
+4. Run main.py file to train the model. You can configure some training parameters through the command line. 
 ```bash
 python main.py
 ```
 
-4. Run main.py file to test the model.
+5. Run main.py file to test the model.
 ```bash
 python main.py --test
 ```
